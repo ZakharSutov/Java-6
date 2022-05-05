@@ -1,3 +1,5 @@
+package ro.omsu.imit;
+
 public class Student extends Human{
     private String faculty;
 

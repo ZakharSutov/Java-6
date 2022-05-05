@@ -1,4 +1,7 @@
 import org.junit.Test;
+import ro.omsu.imit.Human;
+import ro.omsu.imit.ListDemo;
+import ro.omsu.imit.Student;
 
 import java.util.*;
 

@@ -1,3 +1,5 @@
+package ro.omsu.imit;
+
 import java.util.*;
 import java.util.ArrayList;
 import java.util.Collections;
