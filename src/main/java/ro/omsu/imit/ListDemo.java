@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class ListDemo {
-    public static ArrayList<Human> listNamesake(ArrayList<Human> arrayList, Human human) {
-        ArrayList<Human> listRes = new ArrayList<>();
+    public static List<Human> listNamesake(List<Human> arrayList, Human human) {
+        List<Human> listRes = new ArrayList<>();
         for (Human elm : arrayList) {
             if (elm.getLastName().equals(human.getLastName())) {
                 listRes.add(elm);
@@ -15,8 +15,8 @@ public class ListDemo {
         return listRes;
     }
 
-    public static ArrayList<Human> listWithoutHuman(ArrayList<Human> arrayList, Human human) {
-        ArrayList<Human> listRes = new ArrayList<>();
+    public static List<Human> listWithoutHuman(List<Human> arrayList, Human human) {
+        List<Human> listRes = new ArrayList<>();
         for (Human elm : arrayList) {
             if (!elm.equals(human)) {
                 listRes.add(elm);
@@ -25,8 +25,8 @@ public class ListDemo {
         return listRes;
     }
 
-    public static ArrayList<Set<Integer>> listSetWithoutSet(ArrayList<Set<Integer>> arraySet, Set<Integer> set) {
-        ArrayList<Set<Integer>> listRes = new ArrayList<>();
+    public static List<Set<Integer>> listSetWithoutSet(List<Set<Integer>> arraySet, Set<Integer> set) {
+        List<Set<Integer>> listRes = new ArrayList<>();
         int flug = 0;
         for (Set<Integer> elmList : arraySet) {
             for (int elmSet : set) {
@@ -42,7 +42,7 @@ public class ListDemo {
         return listRes;
     }
 
-    public static Set<Human> maxAge(ArrayList<Human> list) {
+    public static Set<Human> maxAge(List<Human> list) {
         Set<Human> result = new HashSet<>();
         int max = 0;
         for (Human human : list) {
@@ -70,8 +70,8 @@ public class ListDemo {
         return result;
     }
 
-    public static ArrayList<Integer> adultList(Map<Integer, Human> humanMap) {
-        ArrayList<Integer> result = new ArrayList<>();
+    public static List<Integer> adultList(Map<Integer, Human> humanMap) {
+        List<Integer> result = new ArrayList<>();
         for (Map.Entry<Integer, Human> map: humanMap.entrySet()) {
             if (map.getValue().getAge() >= 18) {
                 result.add(map.getKey());
@@ -88,14 +88,14 @@ public class ListDemo {
         return result;
     }
 
-    public static Map<Integer, ArrayList<Human>> mapListHuman(Set<Human> humanSet) {
-        Map<Integer, ArrayList<Human>> result = new HashMap<>();
+    public static Map<Integer, List<Human>> mapListHuman(Set<Human> humanSet) {
+        Map<Integer, List<Human>> result = new HashMap<>();
         Set<Integer> ageSet= new HashSet<>();
         for (Human human: humanSet) {
             ageSet.add(human.getAge());
         }
         for (int age: ageSet) {
-            ArrayList<Human> humanArrayList = new ArrayList<>();
+            List<Human> humanArrayList = new ArrayList<>();
             for (Human human: humanSet) {
                 if (human.getAge() == age) {
                     humanArrayList.add(human);

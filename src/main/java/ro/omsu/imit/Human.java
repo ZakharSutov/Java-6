@@ -1,6 +1,5 @@
 package ro.omsu.imit;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class Human {

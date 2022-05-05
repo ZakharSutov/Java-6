@@ -21,8 +21,8 @@ public class ListDemoTest {
     public void listNamesake() {
         arrayList.addAll(new ArrayList<Human>(Arrays.asList(human1, human2, human3, human5)));
         ArrayList<Human> listAns = new ArrayList<>();
-        listAns.add(new Human("Сивов", "Алексей", "Дмитриевич", 19));
-        listAns.add(new Human("Сивов", "Мурат", "Муратович", 5));
+        listAns.add(human1);
+        listAns.add(human5);
         assertEquals(listAns, ListDemo.listNamesake(arrayList, human4));
     }
 
