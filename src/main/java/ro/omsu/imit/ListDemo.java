@@ -19,7 +19,7 @@ public class ListDemo {
         List<Human> listRes = new ArrayList<>();
         for (Human elm : arrayList) {
             if (!elm.equals(human)) {
-                listRes.add(elm);
+                listRes.add(new Human(elm));
             }
         }
         return listRes;

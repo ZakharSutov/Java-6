@@ -29,7 +29,7 @@ public class ListDemoTest {
     @Test
     public void listWithoutHuman() {
         arrayList.addAll(new ArrayList<Human>(Arrays.asList(human1, human2, human3, human5)));
-        ArrayList<Human> listAns = new ArrayList<>();
+        List<Human> listAns = new ArrayList<>();
         listAns.addAll(new ArrayList<Human>(Arrays.asList(human2, human3, human5)));
         assertEquals(listAns, ListDemo.listWithoutHuman(arrayList, human1));
     }
@@ -37,10 +37,21 @@ public class ListDemoTest {
     @Test
     public void listWithoutHuman1() {
         arrayList.addAll(new ArrayList<Human>(Arrays.asList(human1, human2, human3, human5)));
-        ArrayList<Human> listAns = new ArrayList<>();
+        List<Human> listAns = new ArrayList<>();
         listAns.addAll(new ArrayList<Human>(Arrays.asList(human2, human3, human5)));
         arrayList.set(1, human5);
         assertNotEquals(arrayList, ListDemo.listWithoutHuman(arrayList, human1));
+    }
+
+    @Test
+    public void listWithoutHuman2() {
+        arrayList.addAll(new ArrayList<Human>(Arrays.asList(human1, human2, human3, human5)));
+        List<Human> listAns = new ArrayList<>();
+        //listAns.addAll(new ArrayList<Human>(Arrays.asList(human2, human3, human5)));
+        listAns = ListDemo.listWithoutHuman(arrayList, human1);
+        arrayList.get(1).setLastName("Сивов");
+        assertFalse(arrayList.get(1).equals(listAns.get(0)));
+
     }
 
     @Test

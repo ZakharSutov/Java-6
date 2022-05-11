@@ -16,6 +16,13 @@ public class Human {
         this.age = age;
     }
 
+    public Human(Human x) {
+        this.lastName = x.getLastName();;
+        this.name = x.getName();
+        this.patronymic = x.getPatronymic();
+        this.age = x.getAge();
+    }
+
     public String getLastName() {
         return lastName;
     }
