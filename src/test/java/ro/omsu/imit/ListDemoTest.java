@@ -1,3 +1,5 @@
+package ro.omsu.imit;
+
 import org.junit.Test;
 import ro.omsu.imit.Human;
 import ro.omsu.imit.ListDemo;
